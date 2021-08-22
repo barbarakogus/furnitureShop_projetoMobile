@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/backText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="28dp"
+            android:textSize="20sp"
+            android:textColor="#808080">
+        </TextView>
+
+        <TextView
+            android:id="@+id/productText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_name"
+            app:layout_constraintTop_toBottomOf="@id/backText"
+            app:layout_constraintStart_toStartOf="@id/backText"
+            android:layout_marginTop="28dp"
+            android:textSize="26sp"
+            android:textColor="#000000"
+            android:textStyle="bold">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imageLamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/productText"
+            app:layout_constraintStart_toStartOf="@id/backText"
+            android:src="@drawable/luminaria"
+            android:layout_marginTop="32dp"
+            android:scaleType="centerCrop"
+            android:background="#F5F5F5">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/imageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_byNow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonShare"
+            android:layout_marginRight= "48dp"
+            android:padding="32dp"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:background="#DCDCDC"
+            android:contextClickable="true">
+        </TextView>
+
+        <Button
+            android:id="@+id/buttonShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/icone_share"
+            app:layout_constraintTop_toBottomOf="@id/imageLamp"
+            app:layout_constraintStart_toStartOf="@id/backText"
+            android:layout_marginTop="52dp"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:icon="@drawable/share"
+            app:iconSize = "24dp"
+            app:iconTint = "#000000"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon">
+        </Button>
+
+        <Button
+            android:id="@+id/buttonFavourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/icone_add_favourite"
+            app:layout_constraintTop_toBottomOf="@id/buttonShare"
+            app:layout_constraintStart_toStartOf="@id/backText"
+            android:layout_marginTop="16dp"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:icon="@drawable/coracao"
+            app:iconSize = "24dp"
+            app:iconTint = "#000000"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon">
+        </Button>
+
+        <Button
+            android:id="@+id/buttonMeasure"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/icone_medidas"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:icon="@drawable/regua"
+            app:iconSize="24dp"
+            app:iconTint="#000000"
+            app:layout_constraintStart_toStartOf="@id/backText"
+            app:layout_constraintTop_toBottomOf="@id/buttonFavourite"></Button>
+
+        <TextView
+            android:id="@+id/textDescriptionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_product_description"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/buttonMeasure"
+            app:layout_constraintStart_toStartOf="@id/backText"
+            android:layout_marginTop="32dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:text="@string/produto_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/backText"
+            app:layout_constraintTop_toBottomOf="@id/textDescriptionTitle"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="28dp"
+            android:lineSpacingExtra="8dp"
+            android:textColor="#808080"
+            android:textSize="18sp">
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

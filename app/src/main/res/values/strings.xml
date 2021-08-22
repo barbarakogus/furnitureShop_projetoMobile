@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Furniture Shop Activity</string>
+    <string name="title_activity_furniture_shop2">FurnitureShopActivity2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="titulo_tela1">minimax</string>
+    <string name="description">Most wanted luxury furniture in one app</string>
+    <string name="button_search">search</string>
+    <string name="button_filter">filter</string>
+    <string name="first_image_text">Discover studio</string>
+    <string name="second_image_text">discover living</string>
+    <string name="back">Back</string>
+    <string name="product_name">MonoLamp</string>
+    <string name="product_price">319$</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="textField_nome">Holder Name</string>
+    <string name="textField_card_number">Card Number</string>
+    <string name="textField_expire">Expire</string>
+    <string name="textField_cvv">cvv</string>
+    <string name="confirm_and_continue">Confirm and continue</string>
+    <string name="button_byNow">319$ - Buy now</string>
+    <string name="icone_share">Share</string>
+    <string name="icone_add_favourite">Add favourite</string>
+    <string name="icone_medidas">130cm x 40cm</string>
+    <string name="titulo_product_description">Product Description</string>
+    <string name="produto_description">The Bell Large table lamp has a polished surface that reflects the colors and objects that are in its vicinity.</string>
+</resources>

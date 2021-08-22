@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FurnitureShop2Finalizing">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/backTextPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="28dp"
+            android:textSize="20sp"
+            android:textColor="#808080"
+            android:layout_marginStart="28dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/productTextPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_name"
+            app:layout_constraintTop_toBottomOf="@id/backTextPayment"
+            app:layout_constraintStart_toStartOf="@id/backTextPayment"
+            android:layout_marginTop="28dp"
+            android:textSize="26sp"
+            android:textColor="#000000"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/productPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_price"
+            app:layout_constraintTop_toBottomOf="@id/productTextPayment"
+            app:layout_constraintStart_toStartOf="@id/backTextPayment"
+            android:layout_marginTop="16dp"
+            android:textSize="26sp"
+            android:textColor="#000000"
+            android:textStyle="bold">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imageLampPayment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="28dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/luminaria"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/backTextPayment"
+            app:layout_constraintTop_toBottomOf="@id/productPriceText"
+            android:layout_marginEnd="28dp">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/paymentMethodText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_method"
+            app:layout_constraintTop_toTopOf="@id/paypal"
+            app:layout_constraintBottom_toBottomOf="@id/paypal"
+            app:layout_constraintStart_toStartOf="@id/backTextPayment"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold">
+        </TextView>
+
+<!--        alinhaR ALGO PELO CENTRO TOP TO BOTTON - START TO END-->
+
+        <ImageView
+            android:id="@+id/paypal"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/paypal"
+            app:layout_constraintEnd_toStartOf="@id/mastercard"
+            app:layout_constraintTop_toBottomOf="@id/imageLampPayment"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/mastercard"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mastercard"
+            app:layout_constraintEnd_toStartOf="@id/visa"
+            app:layout_constraintTop_toBottomOf="@id/imageLampPayment"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/visa"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/visa"
+            app:layout_constraintTop_toBottomOf="@id/imageLampPayment"
+            app:layout_constraintEnd_toEndOf="@id/imageLampPayment"
+            android:layout_marginTop="20dp">
+        </ImageView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/holderNameTextField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/textField_nome"
+            app:layout_constraintTop_toBottomOf="@id/paymentMethodText"
+            app:layout_constraintStart_toStartOf="@id/backTextPayment"
+            app:layout_constraintEnd_toEndOf="@id/imageLampPayment"
+            android:layout_marginTop="32dp"
+            app:boxBackgroundColor="#FFFFFF"
+            android:textColorHint="#000000"
+            app:boxStrokeColor="#D61010"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cardNumberTextField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/textField_card_number"
+            app:layout_constraintTop_toBottomOf="@id/holderNameTextField"
+            app:layout_constraintStart_toStartOf="@id/backTextPayment"
+            app:layout_constraintEnd_toEndOf="@id/imageLampPayment"
+            android:layout_marginTop="32dp"
+            app:boxBackgroundColor="#FFFFFF"
+            android:textColorHint="#000000"
+            app:boxStrokeColor="#D61010">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/expireTextField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/textField_expire"
+            app:layout_constraintTop_toBottomOf="@id/cardNumberTextField"
+            app:layout_constraintStart_toStartOf="@id/backTextPayment"
+            app:layout_constraintEnd_toStartOf="@id/cvvTextField"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="16dp"
+            app:boxBackgroundColor="#FFFFFF"
+            android:textColorHint="#000000"
+            app:boxStrokeColor="#D61010">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cvvTextField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/textField_cvv"
+            app:layout_constraintTop_toBottomOf="@id/cardNumberTextField"
+            app:layout_constraintEnd_toEndOf="@id/imageLampPayment"
+            app:layout_constraintStart_toEndOf="@id/expireTextField"
+            android:layout_marginTop="32dp"
+            app:boxBackgroundColor="#FFFFFF"
+            android:textColorHint="#000000"
+            app:boxStrokeColor="#D61010">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/buttonConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/expireTextField"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/confirm_and_continue"
+            android:layout_marginTop="32dp"
+            android:padding="32dp"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal">
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
