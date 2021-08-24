@@ -11,9 +11,13 @@
         android:layout_height="wrap_content"
         android:src="@drawable/meeting_room"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="centerCrop">
+        android:scaleType="fitXY">
     </ImageView>
+
+<!--    Como a imagem é muito alta e larga, teste diferentes tipos de Scale para você ver-->
+<!--    o efeito que gera na exibicação da imagem :)-->
 
     <TextView
         android:id="@+id/textoComplemento"
