@@ -7,15 +7,16 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
-class Adapter (var listaProdutos : List<Pair<ImageView, String>>) : RecyclerView.Adapter<Adapter.ViewHolder> () {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Adapter.ViewHolder {
+class Adapter (var listaProdutos : List<Pair<String, String>>) : RecyclerView.Adapter<Adapter.ViewHolder> () {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_linha_produto, parent, false)
         val viewHolderListaProdutos = ViewHolder(view)
         return viewHolderListaProdutos
     }
 
-    override fun onBindViewHolder(holder: Adapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val produto = listaProdutos[position]
         holder.preencherLista(produto.first, produto.second)
     }
@@ -28,14 +29,9 @@ class Adapter (var listaProdutos : List<Pair<ImageView, String>>) : RecyclerView
         var produtoTela = itemView.findViewById<ImageView>(R.id.imagemProduto)
         val complementoTela = itemView.findViewById<TextView>(R.id.textoComplemento)
 
-        fun preencherLista (produto: ImageView, complemento: String) {
-            produtoTela = produto
+        fun preencherLista (produto: String, complemento: String) {
+            Glide.with(itemView.context).load(produto).into(produtoTela)
             complementoTela.text = complemento
-
-            /*complementoTela.setOnClickListener {
-                val goToNextPage = Intent(this, FurnitureShopActivity2 ::class.java)
-                startActivity(goToNextPage)
-            }*/
         }
     }
 }
