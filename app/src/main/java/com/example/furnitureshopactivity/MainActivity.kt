@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     val complementoProduto3 = "Discover stuido"
 
-    val listaProdutos = mutableListOf<Pair<ImageView, String>>()
+    val listaProdutos = mutableListOf<Pair<String, String>>()
 
     var recyclerViewProdutos : RecyclerView? = null
     var adapterListaProdutos : Adapter? = null
@@ -33,15 +33,18 @@ class MainActivity : AppCompatActivity() {
         //criarLista(produto1, complementoProduto1)
         //criarLista(produto2, complementoProduto2)
 
-        val produto3 = Glide.with(this).load("https://ambientearcondicionado.com.br/blog/wp-content/uploads/2020/10/ACK02180.jpg").into(ImageView(this))
-        criarLista(produto3.view, complementoProduto3)
+        //Passar a string com a URL da imagem é menos complexo e custoso
+        //Como o ImageView será inflado pelo adapter, basta que o adaptador use
+        //O Glide para colocar o conteúdo da imagem
+        val produto3 = "https://ambientearcondicionado.com.br/blog/wp-content/uploads/2020/10/ACK02180.jpg"
+        criarLista(produto3, complementoProduto3)
 
         adapterListaProdutos = Adapter(listaProdutos)
         recyclerViewProdutos?.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerViewProdutos?.adapter = adapterListaProdutos
     }
 
-    fun criarLista(produto: ImageView, complemento : String) {
+    fun criarLista(produto: String, complemento : String) {
         listaProdutos.add(produto to complemento)
     }
 
