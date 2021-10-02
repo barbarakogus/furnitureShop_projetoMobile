@@ -40,13 +40,12 @@
             android:id="@+id/imageLamp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/productText"
-            app:layout_constraintStart_toStartOf="@id/backText"
-            android:src="@drawable/luminaria"
             android:layout_marginTop="32dp"
+            android:background="#F5F5F5"
             android:scaleType="centerCrop"
-            android:background="#F5F5F5">
-        </ImageView>
+            android:src="@drawable/luminaria"
+            app:layout_constraintStart_toStartOf="@id/backText"
+            app:layout_constraintTop_toBottomOf="@id/productText"></ImageView>
 
         <TextView
             android:id="@+id/imageText"

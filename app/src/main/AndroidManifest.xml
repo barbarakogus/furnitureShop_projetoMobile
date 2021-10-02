@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FurnitureShopActivity">
-        <activity android:name=".FurnitureShop2Finalizing"></activity>
+        <activity android:name=".kitchenSection"></activity>
+        <activity android:name=".FurnitureShop2Finalizing" />
         <activity
             android:name=".FurnitureShopActivity2"
             android:label="@string/title_activity_furniture_shop2"

@@ -9,10 +9,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class Adapter (var listaProdutos : List<Pair<String, String>>) : RecyclerView.Adapter<Adapter.ViewHolder> () {
+class Adapter (var listaProdutos : List<Pair<String, String>>, val onClick : (Int) -> Unit) : RecyclerView.Adapter<Adapter.ViewHolder> () {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_linha_produto, parent, false)
-        val viewHolderListaProdutos = ViewHolder(view)
+        val viewHolderListaProdutos = ViewHolder(view, onClick)
         return viewHolderListaProdutos
     }
 
@@ -25,13 +25,18 @@ class Adapter (var listaProdutos : List<Pair<String, String>>) : RecyclerView.Ad
         return listaProdutos.size
     }
 
-    class ViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder (itemView: View, val onClick: (Int) -> Unit) : RecyclerView.ViewHolder(itemView) {
         var produtoTela = itemView.findViewById<ImageView>(R.id.imagemProduto)
         val complementoTela = itemView.findViewById<TextView>(R.id.textoComplemento)
 
-        fun preencherLista (produto: String, complemento: String) {
+
+        fun preencherLista (complemento: String, produto: String) {
             Glide.with(itemView.context).load(produto).into(produtoTela)
             complementoTela.text = complemento
+
+            complementoTela.setOnClickListener {
+                onClick(adapterPosition)
+            }
         }
     }
 }

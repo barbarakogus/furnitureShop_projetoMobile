@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kitchenSection">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/menuHamburguer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:outlineAmbientShadowColor="#394a51"
+                    android:src="@drawable/menu_hamburguer"
+                    app:layout_constraintBottom_toBottomOf="@id/title"
+                    app:layout_constraintStart_toStartOf="@id/search"
+                    app:layout_constraintTop_toTopOf="@id/title"></ImageView>
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="ola"
+                    android:textAllCaps="true"
+                    android:textColor="#394a51"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="26dp"
+                    android:hint="search"
+                    android:textColorHint="#394a51"
+                    app:boxBackgroundColor="#DCDCDC"
+                    app:boxCornerRadiusBottomEnd="20dp"
+                    app:boxCornerRadiusBottomStart="20dp"
+                    app:boxCornerRadiusTopEnd="20dp"
+                    app:boxCornerRadiusTopStart="20dp"
+                    app:endIconDrawable="@drawable/lupa_arredondada"
+                    app:endIconMode="custom"
+                    app:layout_constraintTop_toBottomOf="@id/title">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/sessao_mesa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/categorias_shape_arredondado"
+                    android:padding="22dp"
+                    android:text="tables"
+                    android:drawableTop="@drawable/mesa_icone"
+                    android:textAllCaps="true"
+                    android:textColor="#394a51"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/sessao_cadeiras"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="@+id/search"
+                    app:layout_constraintTop_toBottomOf="@id/search">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sessao_cadeiras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/categorias_shape_arredondado"
+                    android:drawableTop="@drawable/cadeira_icone"
+                    android:padding="22dp"
+                    android:text="chairs"
+                    android:textAllCaps="true"
+                    android:textColor="#394a51"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/sessao_armarios"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/sessao_mesa"
+                    app:layout_constraintTop_toBottomOf="@id/search"></TextView>
+
+                <TextView
+                    android:id="@+id/sessao_armarios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/categorias_shape_arredondado"
+                    android:padding="22dp"
+                    android:text="stoves"
+                    android:drawableTop="@drawable/fogao_icone"
+                    android:textAllCaps="true"
+                    android:textColor="#394a51"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/search"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/sessao_cadeiras"
+                    app:layout_constraintTop_toBottomOf="@id/search">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sessao_refrigeradores"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/categorias_shape_arredondado"
+                    android:padding="22dp"
+                    android:text="fridge"
+                    android:drawableTop="@drawable/fridge_icone"
+                    android:textAllCaps="true"
+                    android:textColor="#394a51"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/sessao_fogao"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="@id/search"
+                    app:layout_constraintTop_toBottomOf="@id/sessao_mesa">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sessao_fogao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/categorias_shape_arredondado"
+                    android:padding="22dp"
+                    android:text="ovens"
+                    android:drawableTop="@drawable/oven_icone"
+                    android:textAllCaps="true"
+                    android:textColor="#394a51"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/sessao_fornos"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/sessao_refrigeradores"
+                    app:layout_constraintTop_toBottomOf="@id/sessao_mesa">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sessao_fornos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/categorias_shape_arredondado"
+                    android:padding="22dp"
+                    android:text="cabinets"
+                    android:drawableTop="@drawable/cabinets_icone"
+                    android:textAllCaps="true"
+                    android:textColor="#394a51"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/search"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/sessao_fogao"
+                    app:layout_constraintTop_toBottomOf="@id/sessao_mesa">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/offer_text"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/offers_shape_arredondado"
+                    android:lineSpacingExtra="8dp"
+                    android:paddingStart="18dp"
+                    android:paddingTop="18dp"
+                    android:paddingRight="32dp"
+                    android:text="Great offers                     just started now"
+                    android:textColor="#394a51"
+                    android:textSize="26sp"
+                    app:layout_constraintEnd_toEndOf="@id/search"
+                    app:layout_constraintStart_toStartOf="@id/search"
+                    app:layout_constraintTop_toBottomOf="@id/sessao_refrigeradores"
+                    android:paddingLeft="18dp"
+                    android:paddingEnd="32dp">
+
+                </TextView>
+
+                <Button
+                    android:id="@+id/offer_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginBottom="28dp"
+                    android:backgroundTint="#394a51"
+                    android:text="Get now"
+                    app:layout_constraintBottom_toBottomOf="@+id/offer_text"
+                    app:layout_constraintStart_toStartOf="@+id/offer_text"></Button>
+
+                <TextView
+                    android:id="@+id/recommended_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="Recommended"
+                    android:textColor="#394a51"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="@id/search"
+                    app:layout_constraintTop_toBottomOf="@+id/offer_text"></TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewRecommended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    app:layout_constraintEnd_toEndOf="@id/search"
+                    app:layout_constraintStart_toStartOf="@id/search"
+                    app:layout_constraintTop_toBottomOf="@id/recommended_text"
+                    tools:listitem="@layout/layout_linha_recommended"></androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
